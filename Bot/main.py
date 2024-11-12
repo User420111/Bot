@@ -11,7 +11,9 @@ from database.database import db_start
 
 logger = logging.getLogger(__name__)
 
-
+async def on_startup(_):
+    await db_db_start()
+    print("Work")
 
 
 async def main():
@@ -39,7 +41,7 @@ async def main():
 
 
     await bot.delete_webhook(drop_pending_updates=True)
-    await dp.start_polling(bot)
+    await dp.start_polling(bot, on_startup=on_startup)
 
 
 
