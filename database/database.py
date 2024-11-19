@@ -13,22 +13,27 @@ def db_start():
     cur.execute("CREATE TABLE IF NOT EXISTS users("
                 "user_id INTEGER,"
                 "firstCount INTEGER)")
+    # cur.execute("ALTER TABLE tasks ADD COLUMN file BLOB")
+    # cur.execute("ALTER TABLE users RENAME COLUMN firstCount TO count")
+
     db.commit()
 
-db_start()
 
-def save_users(user_idd, firstCount):
+
+def save_users(user_idd, count):
     sql_check = cur.execute("SELECT * FROM users WHERE user_id = " + str(user_idd)).fetchall()
     if len(sql_check) > 0:
         print("Такой пользователь уже есть")
     else:
-        sql_insert_user = """INSERT INTO users (user_id, firstCount) VALUES (?, ?)"""
-        data_tuple = (user_idd, firstCount)
+        sql_insert_user = """INSERT INTO users (user_id, count) VALUES (?, ?)"""
+        data_tuple = (user_idd, count)
         cur.execute(sql_insert_user, data_tuple)
+
+
     db.commit()
 
 
-def read_first_count(user_idd):
+def read_count(user_idd):
     first_count_query = """SELECT * FROM users WHERE user_id = ?"""
     cur.execute(first_count_query, (user_idd,))
     return cur.fetchone()[1]

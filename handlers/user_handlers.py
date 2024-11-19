@@ -12,8 +12,10 @@ import os
 
 from keyboards import choice
 import database.database
-from database.database import read_blob, write_to_file, write_to_fileStr, save_users, read_first_count
+from database.database import read_blob, write_to_file, write_to_fileStr, save_users, read_count
 from aiogram.types import FSInputFile
+
+import json
 
 
 
@@ -23,7 +25,7 @@ router = Router()
 async def process_start_command(message: Message):
     await message.answer(text=LEXICON['/start'], reply_markup=start_choice())
     await message.answer(str(message.from_user.id))
-    save_users(message.from_user.id, 0)
+    save_users(message.from_user.id, json.dumps([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]))
 
 @router.callback_query(F.data == "web")
 async def Web(callback: CallbackQuery):
@@ -52,7 +54,7 @@ async def answer(callback: CallbackQuery):
 
 @router.callback_query(F.data == "first")
 async def First(callback: CallbackQuery):
-    c = read_first_count(callback.from_user.id)
+    c = read_count(callback.from_user.id)
     read_blob(c + 2)
 
     f = FSInputFile(f"database/db_data/img_{c + 2}.png")
