@@ -61,13 +61,13 @@ def insert_blob(id, task_number, img, answer):
 #
 #     db.commit()
 #
-lst = []
-for i in range(7, 9):
-    f = open(f"D:/Bot/data_for_db/answer_{i}.txt", "r")
-    lst.append(f.read())
-print(lst)
-for j in range(7, 9):
-    insert_blob(j, 1, f"D:/Bot/data_for_db/img_{j}.png", lst[j - 7])
+# lst = []
+# for i in range(7, 9):
+#     f = open(f"D:/Bot/data_for_db/answer_{i}.txt", "r")
+#     lst.append(f.read())
+# print(lst)
+# for j in range(7, 9):
+#     insert_blob(j, 1, f"D:/Bot/data_for_db/img_{j}.png", lst[j - 7])
 
 
 # insert_blob(1, 1, "../firstImg.png", "23")
