@@ -116,12 +116,3 @@ async def First(callback: CallbackQuery):
 
 
 
-
-
-
-
-# @router.callback_query(F.data == "Big")
-# async def process_button_1_press(callback: CallbackQuery):
-#     await callback.message(text="Вы выбрали сайт КЕГЭ")
-
-# await callback.message.answer("He
