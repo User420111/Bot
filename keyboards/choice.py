@@ -1,6 +1,7 @@
 
 from aiogram.types import ReplyKeyboardMarkup
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
+# Для работы с инлайн-кнопками
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
 # def get_yes_no_kb() -> ReplyKeyboardMarkup:
@@ -10,10 +11,11 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 #     kb.adjust(2)
 #     return kb.as_markup(resize_keyboard=True)
 
+# Функции для создания инлайн-кнопок
 def start_choice():
     lst = [
         [InlineKeyboardButton(text="Перейти на сайт", callback_data="web")],
-        [InlineKeyboardButton(text="Посмотреть здесь", callback_data="tg")]
+        [InlineKeyboardButton(text="Посмотреть задания здесь", callback_data="tg")]
     ]
     return InlineKeyboardMarkup(inline_keyboard=lst)
 
@@ -47,7 +49,7 @@ def tasks():
 def task_kb():
     kb = [
         [InlineKeyboardButton(text="Посмотреть ответ", callback_data="answer")],
-        [InlineKeyboardButton(text="Выбрать другой тип задания", callback_data="other_type")]
+        [InlineKeyboardButton(text="Выбрать другое задание", callback_data="other_type")]
     ]
     return InlineKeyboardMarkup(inline_keyboard=kb)
 
