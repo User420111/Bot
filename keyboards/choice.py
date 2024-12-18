@@ -30,18 +30,21 @@ def website_choice():
 def tasks():
     tasks_kb = [
         [InlineKeyboardButton(text="1 задание", callback_data="first")],
-        [InlineKeyboardButton(text=" задание", callback_data="Two")],
-        [InlineKeyboardButton(text=" задание", callback_data="Three")],
-        [InlineKeyboardButton(text=" задание", callback_data="dcd")],
-        [InlineKeyboardButton(text=" задание", callback_data="cdc")],
-        [InlineKeyboardButton(text=" задание", callback_data="ecd")],
-        [InlineKeyboardButton(text="задание", callback_data="eferf")],
-        [InlineKeyboardButton(text="задание", callback_data="cerver")],
-        [InlineKeyboardButton(text=" задание", callback_data="ecever")],
-        [InlineKeyboardButton(text=" задание", callback_data="reverv")],
-        [InlineKeyboardButton(text=" задание", callback_data="ververe")],
-        [InlineKeyboardButton(text=" задание", callback_data="ververv")],
-        [InlineKeyboardButton(text=" задание", callback_data="vevevfrervr")]
+        [InlineKeyboardButton(text="2 задание", callback_data="Two")],
+        [InlineKeyboardButton(text="3 задание", callback_data="Three")],
+        [InlineKeyboardButton(text="4 задание", callback_data="dcd")],
+        [InlineKeyboardButton(text="5 задание", callback_data="cdc")],
+        [InlineKeyboardButton(text="6 задание", callback_data="ecd")],
+        [InlineKeyboardButton(text="7 задание", callback_data="eferf")],
+        [InlineKeyboardButton(text="8 задание", callback_data="cerver")],
+        [InlineKeyboardButton(text="9 задание", callback_data="ecever")],
+        [InlineKeyboardButton(text="10 задание", callback_data="reverv")],
+        [InlineKeyboardButton(text="11 задание", callback_data="ververe")],
+        [InlineKeyboardButton(text="12 задание", callback_data="ververv")],
+        [InlineKeyboardButton(text="13 задание", callback_data="vevevfrervr")],
+        [InlineKeyboardButton(text="14 задание", callback_data="vevevfrervr")],
+        [InlineKeyboardButton(text="15 задание", callback_data="vevevfrervr")],
+        [InlineKeyboardButton(text="16 задание", callback_data="vevevfrervr")]
 
     ]
     return InlineKeyboardMarkup(inline_keyboard=tasks_kb)
