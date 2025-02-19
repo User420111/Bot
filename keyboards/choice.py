@@ -22,8 +22,7 @@ def start_choice():
 def website_choice():
     inline_kb_list = [
         [InlineKeyboardButton(text="КЕГЭ", url="https://kompege.ru/")],
-        [InlineKeyboardButton(text="ФИПИ", url="https://ege.fipi.ru/bank/index.php?proj=B9ACA5BBB2E19E434CD6BEC25284C67F")],
-        [InlineKeyboardButton(text="РЕШУ ЕГЭ", url="https://inf-ege.sdamgia.ru/")]
+        [InlineKeyboardButton(text="ФИПИ", url="https://ege.fipi.ru/bank/index.php?proj=B9ACA5BBB2E19E434CD6BEC25284C67F")]
     ]
     return InlineKeyboardMarkup(inline_keyboard=inline_kb_list)
 
@@ -52,7 +51,7 @@ def tasks():
 def task_kb():
     kb = [
         [InlineKeyboardButton(text="Посмотреть ответ", callback_data="answer")],
-        [InlineKeyboardButton(text="Выбрать другое задание", callback_data="other_type")]
+        [InlineKeyboardButton(text="Выбрать другой тип задания", callback_data="other_type")]
     ]
     return InlineKeyboardMarkup(inline_keyboard=kb)
 

@@ -65,13 +65,15 @@ def load_blob(id, task_number, img, answer): # Загружаем задание
 ######## Здесь мы загружали задания в БД
 
 # def insert_data(id, task_number, img, answer):
-#     sql_insert = """INSERT INTO tasks (id, task_number, img, answer VALUES (?, ?, ?, ?)"""
+#     sql_insert = """INSERT INTO tasks (id, task_number, img, answer) VALUES (?, ?, ?, ?)"""
 #     emp_img = convert(img)
 #     data_tuple = (id, task_number, emp_img, answer)
 #     cur.execute(sql_insert,  data_tuple)
 #
 #     db.commit()
 #
+# insert_data(10, 1, "C:\\Users\\user\\PyCharm Projects\\Bot\\data_for_db\\img_10.png", 14)
+
 # lst = []
 # for i in range(7, 9):
 #     f = open(f"D:/Bot/data_for_db/answer_{i}.txt", "r")
